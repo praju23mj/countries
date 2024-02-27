@@ -11,8 +11,8 @@ useEffect(()=>{
   fetch("https://restcountries.com/v3.1/all")
   .then(response=>response.json())
   .then(data=>setCountries(data))
-  .catch(err=>console.error(err))
-})
+  .catch(err=>console.error("Error fetching data: ",err))
+},[])
 
 const flagStyle = {
   width: "100px",
